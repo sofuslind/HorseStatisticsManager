@@ -1,0 +1,79 @@
+@startuml "HorseStat"
+left to right direction
+
+skinparam classAttributeIconSize 0
+skinparam linetype ortho
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam nodesep 40
+skinparam ranksep 25
+
+hide empty members
+
+abstract class Animal {
+    # double average
+    # String name
+
+    + boolean validStringCheck(String string)
+    + void validCheck(double value, double min, double max, String error)
+    + double getAverage()
+    + String getName()
+    + void setName(String name)
+    + abstract void findAverage()
+    + int compareTo(Animal o)
+}
+
+class Horse {
+    # double speed
+    # double jump
+    # double health
+
+    # String color
+    # String pattern
+
+    # double speedPro
+    # double jumpPro
+    # double healthPro
+
+    + Horse(...)
+    + Horse(..., String color, String pattern)
+
+    + void setColor(String color)
+    + void setPattern(String pattern)
+
+    + void findPercent()
+    + void findAverage()
+
+    + double getSpeed()
+    + double getJump()
+    + double getHealth()
+
+    + double getRealJump()
+    + double getRealSpeed()
+    + double getRealHealth()
+    + int getRealAverage()
+
+    + static Double formatDouble(double value)
+}
+
+class HorseListManager {
+    # File horsesFile
+    # ArrayList<Horse> horses
+
+    + HorseListManager(String path)
+
+    + void save(ArrayList<Horse> horsesSave)
+    + void save(Horse horse)
+    + void load()
+
+    + void addHorse(Horse horse)
+    + void removeHorse(int index)
+    + void sortList()
+
+    + ArrayList<Horse> getHorses()
+}
+
+Animal <|-- Horse
+HorseListManager "1" o-- "0...n" Horse
+
+@enduml
