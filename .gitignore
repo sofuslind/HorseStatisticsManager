@@ -18,3 +18,6 @@ buildNumber.properties
 
 # Local horselistfile:
 horses.txt
+
+# Need to remove idea files until i understand how to use them
+.idea
