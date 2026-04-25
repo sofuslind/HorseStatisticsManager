@@ -1,0 +1,33 @@
+.root {
+    -fx-background-color: #1e1e1e;
+}
+
+.label {
+    -fx-text-fill: white;
+}
+
+.title {
+    -fx-font-size: 22px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.text-field {
+    -fx-background-color: #2b2b2b;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #888;
+}
+
+.button {
+    -fx-background-color: #3c3f41;
+    -fx-text-fill: white;
+}
+
+.button:hover {
+    -fx-background-color: #4b4f51;
+}
+
+.table-column {
+    -fx-background-color: #2b2b2b;
+    -fx-text-fill: white;
+}

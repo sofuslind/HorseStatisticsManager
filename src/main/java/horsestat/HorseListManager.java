@@ -111,7 +111,6 @@ public class HorseListManager {
     }
 
     // Liste av hester for testing
-
     public void addTestHorses() throws IOException {
         List.of(
                 new Horse("Aster", 0.15, 0.45, 18, "brown", "none"),
